@@ -1,8 +1,5 @@
 package frame.system.vector;
 
-import java.util.Arrays;
-import java.util.function.DoubleUnaryOperator;
-
 public class Vector3D extends Vector {
     public Vector3D() {
         super(0, 0, 0);

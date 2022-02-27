@@ -2,8 +2,6 @@ package drawable;
 
 import java.awt.Graphics;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.stream.Collectors;
 
 import frame.system.complex.Quaternion;
 import frame.system.vector.Vector3D;

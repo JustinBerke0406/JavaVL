@@ -2,10 +2,7 @@ package drawable;
 
 import java.awt.Graphics;
 
-import frame.Placeable;
-import frame.Screen.Layer;
 import frame.system.complex.Quaternion;
-import frame.system.vector.Vector3D;
 
 public class Point extends Drawable {
 
