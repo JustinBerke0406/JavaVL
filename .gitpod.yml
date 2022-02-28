@@ -1,6 +1,6 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: bash -c 'chmod +x comp.sh; ./comp.sh' # runs during prebuild
+  - init: bash -c 'chmod +x init.sh; ./init.sh' # runs during prebuild
     command: echo 'start script'
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
