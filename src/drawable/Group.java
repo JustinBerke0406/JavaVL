@@ -8,7 +8,6 @@ import frame.system.vector.Vector3D;
 
 public class Group extends Drawable {
     private ArrayList<Drawable> comps = new ArrayList<>();
-    private ArrayList<Vector3D> initCenters = new ArrayList<>();
 
     public Group() {
         this(0, 0, 0);
@@ -25,10 +24,8 @@ public class Group extends Drawable {
     public Group(double x, double y, double z, Drawable... draws) {
         super(x, y, z);
 
-        for (Drawable c : draws) {
-            initCenters.add(c.getCenter());
+        for (Drawable c : draws)
             comps.add(c);
-        }
     }
 
     public ArrayList<Drawable> getList() {
