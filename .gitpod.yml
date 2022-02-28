@@ -1,10 +1,10 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: echo 'find . -name "*.java" -print | xargs javac -d bin' # runs during prebuild
+  - init: echo 'chmod +x init.sh; ./init.sh' # runs during prebuild
     command: echo 'start script'
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 image: gitpod/workspace-full-vnc
 ports:
-  - port: 5900
+  - port: 6080
     onOpen: open-preview
