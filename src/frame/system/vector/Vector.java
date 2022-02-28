@@ -37,6 +37,10 @@ public class Vector {
         return values.length;
     }
 
+    public Vector deepCopy() {
+        return new Vector(values.clone());
+    }
+
     public Vector expandFirst(int amount) {
         return new Vector(DoubleStream.concat(Arrays.stream(new double[amount]), Arrays.stream(values)).toArray());
     }
@@ -65,6 +69,10 @@ public class Vector {
 
     public Vector addElements(Vector other) {
         return new Vector(IntStream.range(0, values.length).mapToDouble(i -> values[i] + other.getIndex(i)).toArray());
+    }
+
+    public Vector subtractElements(Vector other) {
+        return new Vector(IntStream.range(0, values.length).mapToDouble(i -> values[i] - other.getIndex(i)).toArray());
     }
 
     @Override

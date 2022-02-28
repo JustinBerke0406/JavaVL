@@ -176,7 +176,7 @@ public class Screen extends JPanel {
 
         center.setX(center.x() * (double) width/gridWidth);
         center.setY(center.y() * (double) height/gridHeight);
-        center.setZ(center.z() * 2 * ((double) height/gridHeight));
+        center.setZ(center.z() * ((double) height/gridHeight));
 
         if (p instanceof Group) {
             for (Drawable c : ((Group) p).getList()) {

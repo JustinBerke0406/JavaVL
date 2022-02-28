@@ -39,9 +39,9 @@ public class Group extends Drawable {
     public void draw(Graphics g) {
         for (int i = 0; i < comps.size(); i++) {
             Drawable c = comps.get(i);
-            c.setCenter(Vector3D.convertLike(initCenters.get(i).addElements(getCenter())));
+            c.setCenter(Vector3D.convertLike(c.getCenter().addElements(getCenter())));
             c.draw(g);
-            c.setCenter(Vector3D.convertLike(initCenters.get(i)));
+            c.setCenter(Vector3D.convertLike(c.getCenter().subtractElements(getCenter())));
         }
     }
 
@@ -50,7 +50,6 @@ public class Group extends Drawable {
         for (int i = 0; i < comps.size(); i++) {
             Drawable c = comps.get(i);
             c.rotate(q, false);
-            initCenters.set(i, c.getCenter());
         }
     }
 }
