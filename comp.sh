@@ -1,0 +1,1 @@
+bash -c 'find . -name "*.java" -print | xargs javac -d bin'
